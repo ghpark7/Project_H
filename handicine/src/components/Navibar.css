@@ -1,0 +1,29 @@
+.custom-navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 10;
+  font-size: 1.5rem;
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: bold;
+  padding-left: 70px;
+  padding-top: 30px;
+  font-size: 3rem;
+  color: white !important;
+}
+
+.custom-navbar .nav-link {
+  color: white !important;
+  padding: 15px 15px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.custom-navbar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000 !important;
+}

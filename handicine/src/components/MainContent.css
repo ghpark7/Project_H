@@ -1,0 +1,26 @@
+.main-content {
+    display: flex;
+    align-items: flex-end; /* 아래쪽에 텍스트 배치 */
+    justify-content: center; /* 중앙에 텍스트 배치 */
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .content-container {
+    /* 배경색 없이 글자만 배치 */
+    padding: 20px;
+    margin-bottom: 120px; /* 하단과의 간격 조정 */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: white; /* 흰색 텍스트로 배경 이미지 위에 잘 보이도록 설정 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 가독성을 위한 그림자 효과 */
+  }
+  
+  p {
+    font-size: 1.5rem;
+    color: white; /* 흰색 텍스트로 설정 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 가독성을 위한 그림자 효과 */
+    margin-top: 30px;
+  }
