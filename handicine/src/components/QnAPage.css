@@ -1,0 +1,48 @@
+.qna-page {
+    padding: 20px;
+    padding-top: 140px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #B3D9E2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qna-list {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.qna-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.qna-item h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.qna-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.qna-page .search-bar {  /* QnA 페이지에서만 적용되도록 구체적으로 선택자 설정 */
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.qna-page .input-group {  /* 검색창 스타일도 구체적으로 */
+    display: flex;
+}

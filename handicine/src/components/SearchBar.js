@@ -1,15 +1,18 @@
 import React from 'react';
 import { Form, FormControl, Button } from 'react-bootstrap';
+import './SearchBar.css';
 
 const SearchBar = () => {
   return (
     <Form className="search-bar">
       <FormControl
         type="text"
-        placeholder="Search for medical information..."
-        className="mr-sm-2"
+        placeholder="약품 이름을 입력해주세요"
+        className="search-input"
       />
-      <Button variant="outline-success">Search</Button>
+      <Button variant="success" className="search-button">
+        <i className="fas fa-search"></i>
+      </Button>
     </Form>
   );
 };
