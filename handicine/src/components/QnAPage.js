@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './QnAPage.css';
 import { Link } from 'react-router-dom';
-import { Dropdown, DropdownButton, FormControl, Button, InputGroup } from 'react-bootstrap';
+import { Dropdown, DropdownButton, FormControl, InputGroup } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa'; // 돋보기 아이콘
 
 const QnAPage = () => {
   const [questions, setQuestions] = useState([
@@ -38,11 +39,11 @@ const QnAPage = () => {
 
       {/* 검색창 시작 */}
       <div className="search-bar">
-        <InputGroup className="mb-3">
+        <InputGroup className="custom-search">
           <DropdownButton
             variant="outline-secondary"
             title={searchOption}
-            id="input-group-dropdown-1"
+            id="input-group-dropdown"
             onSelect={handleSearchOptionSelect}
           >
             <Dropdown.Item eventKey="게시글 + 댓글">게시글 + 댓글</Dropdown.Item>
@@ -55,9 +56,9 @@ const QnAPage = () => {
             aria-label="Search"
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <Button variant="success" onClick={handleSearch}>
-            검색
-          </Button>
+          <InputGroup.Text className="search-icon" onClick={handleSearch}>
+            <FaSearch style={{ color: 'green' }} />
+          </InputGroup.Text>
         </InputGroup>
       </div>
       {/* 검색창 끝 */}
