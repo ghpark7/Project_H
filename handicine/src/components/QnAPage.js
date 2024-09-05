@@ -37,7 +37,6 @@ const QnAPage = () => {
     <div className="qna-page">
       <h1>전문가 Q&A 게시판</h1>
 
-      {/* 검색창 시작 */}
       <div className="search-bar">
         <InputGroup className="custom-search">
           <DropdownButton
@@ -46,8 +45,8 @@ const QnAPage = () => {
             id="input-group-dropdown"
             onSelect={handleSearchOptionSelect}
           >
-            <Dropdown.Item eventKey="게시글 + 댓글">게시글 + 댓글</Dropdown.Item>
-            <Dropdown.Item eventKey="제목만">제목만</Dropdown.Item>
+            <Dropdown.Item eventKey="제목 + 게시글">제목 + 게시글</Dropdown.Item>
+            <Dropdown.Item eventKey="제목">제목</Dropdown.Item>
             <Dropdown.Item eventKey="작성자">작성자</Dropdown.Item>
             <Dropdown.Item eventKey="댓글내용">댓글내용</Dropdown.Item>
           </DropdownButton>
@@ -61,7 +60,6 @@ const QnAPage = () => {
           </InputGroup.Text>
         </InputGroup>
       </div>
-      {/* 검색창 끝 */}
 
       <div className="qna-list">
         {questions.map(question => (
