@@ -1,2 +1,2 @@
 # Project_H
-LG UPLUS UREKA SW교육 React 실습용 레포지토리
+LG UPLUS UREKA SW교육 2차 미니프로젝트 TEAM5
