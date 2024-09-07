@@ -45,8 +45,8 @@ const QnAPage = () => {
             id="input-group-dropdown"
             onSelect={handleSearchOptionSelect}
           >
-            <Dropdown.Item eventKey="제목 + 게시글">제목 + 게시글</Dropdown.Item>
             <Dropdown.Item eventKey="제목">제목</Dropdown.Item>
+            <Dropdown.Item eventKey="제목 + 게시글">제목 + 게시글</Dropdown.Item>
             <Dropdown.Item eventKey="작성자">작성자</Dropdown.Item>
             <Dropdown.Item eventKey="댓글내용">댓글내용</Dropdown.Item>
           </DropdownButton>
