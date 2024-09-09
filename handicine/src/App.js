@@ -4,6 +4,7 @@ import MainContent from './components/MainContent';
 import Navibar from './components/Navibar';
 import QnAPage from './components/QnAPage';
 import QnADetailPage from './components/QnADetailPage';
+import FreeBoard from './components/FreeBoard';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/qna" element={<QnAPage />} />
+          <Route path="/board" element={<FreeBoard />} />
           <Route path="/qna/:id" element={<QnADetailPage />} />
         </Routes>
       </div>
