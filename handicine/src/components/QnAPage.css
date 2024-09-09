@@ -23,17 +23,35 @@
     border-radius: 8px;
     background-color: #ffffff;
     width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.qna-item h2 {
-    margin: 0;
+.qna-item:hover {
+    background-color: #f1f1f1;
+}
+
+.qna-item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qna-item-title {
     font-size: 1.5rem;
-    color: #007bff;
+    color: #333;
+    margin: 0;
 }
 
-.qna-item p {
-    margin: 5px 0;
+.qna-item-info {
+    display: flex;
+    gap: 20px;
+}
+
+.qna-item-author,
+.qna-item-date {
     color: #555;
+    font-size: 1.3rem;
 }
 
 .qna-page .search-bar {

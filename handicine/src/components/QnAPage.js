@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './QnAPage.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Dropdown, DropdownButton, FormControl, InputGroup, Button } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa'; // 돋보기 아이콘
 
@@ -31,8 +31,11 @@ const QnAPage = () => {
   };
 
   const handleCreateQuestion = () => {
-    // 새로운 질문 등록 페이지로 이동하는 로직
     navigate('/qna/new'); // history.push 대신 navigate 사용
+  };
+
+  const handleQuestionClick = (id) => {
+    navigate(`/qna/${id}`);
   };
 
   useEffect(() => {
@@ -75,13 +78,19 @@ const QnAPage = () => {
 
       {/* 질문 리스트 */}
       <div className="qna-list">
-        {questions.map(question => (
-          <div key={question.id} className="qna-item">
-            <Link to={`/qna/${question.id}`}>
-              <h2>{question.title}</h2>
-            </Link>
-            <p>작성자: {question.author}</p>
-            <p>작성일: {question.date}</p>
+        {questions.map((question) => (
+          <div
+            key={question.id}
+            className="qna-item"
+            onClick={() => handleQuestionClick(question.id)}
+          >
+            <div className="qna-item-content">
+              <h2 className="qna-item-title">{question.title}</h2>
+              <div className="qna-item-info">
+                <span className="qna-item-author">{question.author}</span>
+                <span className="qna-item-date">{question.date}</span>
+              </div>
+            </div>
           </div>
         ))}
       </div>
