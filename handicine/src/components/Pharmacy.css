@@ -1,0 +1,70 @@
+.pharmacy-page {
+    padding: 20px;
+    padding-top: 140px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #96c2c9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pharmacy-page .search-bar {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.pharmacy-page .search-bar input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #008080;
+    border-radius: 10px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.pharmacy-page .search-bar button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #008080;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pharmacy-page .search-bar button:hover {
+    background-color: #006666;
+}
+
+.pharmacy-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.pharmacy-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.pharmacy-item h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #008080;
+}
+
+.pharmacy-item p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 1rem;
+}
