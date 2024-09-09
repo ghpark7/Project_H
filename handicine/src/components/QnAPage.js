@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './QnAPage.css';
-import { Link } from 'react-router-dom';
-import { Dropdown, DropdownButton, FormControl, InputGroup } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import { Dropdown, DropdownButton, FormControl, InputGroup, Button } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa'; // 돋보기 아이콘
 
 const QnAPage = () => {
@@ -19,6 +19,7 @@ const QnAPage = () => {
 
   const [searchOption, setSearchOption] = useState("제목만");
   const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate(); // useHistory 대신 useNavigate 사용
 
   const handleSearchOptionSelect = (option) => {
     setSearchOption(option);
@@ -29,6 +30,11 @@ const QnAPage = () => {
     // 검색 기능을 추가할 때 사용할 검색 로직
   };
 
+  const handleCreateQuestion = () => {
+    // 새로운 질문 등록 페이지로 이동하는 로직
+    navigate('/qna/new'); // history.push 대신 navigate 사용
+  };
+
   useEffect(() => {
     // 백엔드 API에서 데이터를 가져오는 로직을 추가할 수 있습니다.
   }, []);
@@ -37,6 +43,7 @@ const QnAPage = () => {
     <div className="qna-page">
       <h1>전문가 Q&A 게시판</h1>
 
+      {/* 검색창 */}
       <div className="search-bar">
         <InputGroup className="custom-search">
           <DropdownButton
@@ -61,6 +68,12 @@ const QnAPage = () => {
         </InputGroup>
       </div>
 
+      {/* 새로운 질문 등록 버튼 */}
+      <div className="create-question-container">
+        <Button variant="primary" className="create-question-btn" onClick={handleCreateQuestion}>새로운 질문 등록</Button>
+      </div>
+
+      {/* 질문 리스트 */}
       <div className="qna-list">
         {questions.map(question => (
           <div key={question.id} className="qna-item">
