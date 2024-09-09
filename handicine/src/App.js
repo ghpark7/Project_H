@@ -12,7 +12,7 @@ function App() {
         <Navibar />
         <Routes>
           <Route path="/" element={<MainContent />} />
-          <Route path="/qna" element={<QnAPage />} /> {/* QnA 페이지 라우트 추가 */}
+          <Route path="/qna" element={<QnAPage />} />
           <Route path="/qna/:id" element={<QnADetailPage />} />
         </Routes>
       </div>
