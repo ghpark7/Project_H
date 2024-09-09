@@ -15,7 +15,7 @@ const QnAPage = () => {
     { id: 7, title: "전문가에게 질문하고 싶어요", author: "사용자7", date: "2024-09-07" },
     { id: 8, title: "약물 복용 관련 질문이 있습니다", author: "사용자8", date: "2024-09-08" },
     { id: 9, title: "의학적인 질문을 하고 싶어요", author: "사용자9", date: "2024-09-09" },
-  ]);
+]);
 
   const [searchOption, setSearchOption] = useState("제목만");
   const [searchText, setSearchText] = useState("");
@@ -73,7 +73,7 @@ const QnAPage = () => {
 
       {/* 새로운 질문 등록 버튼 */}
       <div className="create-question-container">
-        <Button variant="primary" className="create-question-btn" onClick={handleCreateQuestion}>새로운 질문 등록</Button>
+        <Button variant="primary" className="create-question-btn" onClick={handleCreateQuestion}>새 질문글 작성</Button>
       </div>
 
       {/* 질문 리스트 */}
