@@ -73,3 +73,15 @@
     font-size: 1.5rem;
     padding: 8px 12px;
 }
+
+.create-question-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.create-question-btn {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+}
