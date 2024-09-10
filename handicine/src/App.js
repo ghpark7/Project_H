@@ -6,6 +6,7 @@ import QnAPage from './components/QnAPage';
 import QnADetailPage from './components/QnADetailPage';
 import FreeBoard from './components/FreeBoard';
 import Pharmacy from './components/Pharmacy';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/qna" element={<QnAPage />} />
           <Route path="/board" element={<FreeBoard />} />
           <Route path="/pharmacy" element={<Pharmacy />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/qna/:id" element={<QnADetailPage />} />
         </Routes>
       </div>
