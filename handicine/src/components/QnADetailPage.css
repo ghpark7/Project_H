@@ -18,18 +18,22 @@
 .author-date {
     display: flex;
     justify-content: flex-end;
-    /* 오른쪽 정렬 */
-    gap: 20px;
-    /* 작성자와 작성일 사이 간격 */
+    gap: 30px;
+    text-align: right;
+    width: 100%;
+    max-width: 1200px;
+    font-weight: bold;
 }
 
 .author-date p {
-    margin: 0;
+    margin-top: 30px;
     color: #555;
+    font-size: 1.5rem;
 }
 
 .qna-content {
-    margin: 20px 0;
+    max-width: 1200px;
+    width: 100%;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -37,11 +41,14 @@
 }
 
 .comments-section {
+    max-width: 1200px;
+    width: 100%;
     margin-top: 30px;
 }
 
 .comments-section h2 {
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -64,10 +71,20 @@
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .reply-button-container button:hover {
     background-color: #0056b3;
+}
+
+.qna-detail-page p, 
+.author-date p, 
+.qna-content, 
+.comments-section h2, 
+.comment-item {
+    text-shadow: none;
+    font-size: 1.5rem;
 }
