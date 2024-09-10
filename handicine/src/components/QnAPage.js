@@ -6,7 +6,7 @@ import { FaSearch } from 'react-icons/fa'; // 돋보기 아이콘
 
 const QnAPage = () => {
   const [questions, setQuestions] = useState([
-    { id: 1, title: "전문가에게 질문하고 싶어요", author: "사용자1", date: "2024-09-01" },
+    { id: 1, title: "타이레놀 복용 시 주의사항 및 장기 복용에 대한 문의", author: "박건휘", date: "2024-09-01" },
     { id: 2, title: "약물 복용 관련 질문이 있습니다", author: "사용자2", date: "2024-09-02" },
     { id: 3, title: "의학적인 질문을 하고 싶어요", author: "사용자3", date: "2024-09-03" },
     { id: 4, title: "약물 복용 관련 질문이 있습니다", author: "사용자4", date: "2024-09-04" },
