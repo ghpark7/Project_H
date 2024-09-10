@@ -1,0 +1,73 @@
+.qna-detail-page {
+    padding: 20px;
+    padding-top: 140px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #96c2c9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qna-detail-page p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.author-date {
+    display: flex;
+    justify-content: flex-end;
+    /* 오른쪽 정렬 */
+    gap: 20px;
+    /* 작성자와 작성일 사이 간격 */
+}
+
+.author-date p {
+    margin: 0;
+    color: #555;
+}
+
+.qna-content {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section {
+    margin-top: 30px;
+}
+
+.comments-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.comment-item {
+    padding: 10px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reply-button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.reply-button-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reply-button-container button:hover {
+    background-color: #0056b3;
+}
