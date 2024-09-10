@@ -47,11 +47,13 @@ const QnADetailPage = () => {
         <p>{qna.content}</p>
       </div>
       
-      <div className="reply-button-container">
-        <button onClick={handleReplyClick}>답글 달기</button>
-      </div>
       <div className="comments-section">
-        <h2>답변</h2>
+        <div className="comments-header">
+          <h2>답변</h2>
+          <div className="reply-button-container">
+            <button onClick={handleReplyClick}>답변 달기</button>
+          </div>
+        </div>
         {qna.comments.map((comment) => (
           <div key={comment.id} className="comment-item">
             <p><strong>{comment.author}</strong>: {comment.content}</p>
