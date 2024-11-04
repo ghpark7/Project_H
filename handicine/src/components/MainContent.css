@@ -1,58 +1,121 @@
 .main-content {
     display: flex;
-    align-items: flex-end;
-    /* 아래쪽에 텍스트 배치 */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    /* 중앙에 텍스트 배치 */
     text-align: center;
-    height: 100vh;
-}
-
-.search-container {
-    position: absolute;
-    top: 20%; /* 검색창을 상단에 위치 */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.button-container {
-    position: absolute;
-    top: calc(20% + 140px);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.custom-button {
-    background-color: green;
+    height: calc(100vh - 56px); /* 내비바 높이 제외 */
+    background-image: url('../images/backgroundImg2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
     color: white;
-    font-size: 1.5rem;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-.custom-button:hover {
-    background-color: darkgreen;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 56px; /* 내비바 높이 */
+    overflow: hidden;
 }
 
 .content-container {
-    padding: 20px;
-    margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  width: 90%; /* 너비 조정 */
 }
 
-h1 {
-    font-size: 4rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px; /* 제목과 검색창 간의 여백 */
 }
 
-.content-container p{
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-container .form-control {
+    height: 60px; /* 조정 필요 */
+    border-radius: 30px; /* 둥근 모서리 */
+    padding: 0 20px; /* 여백 조정 */
     font-size: 2rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-top: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #00A3E0;
 }
+
+.form-container .form-control:focus {
+    border-color: #83C9E7;
+    box-shadow: 0px 0px 10px rgba(0, 163, 224, 0.5);
+}
+
+.form-container .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content-container h1 {
+    font-size: 2.5rem; /* 제목 크기 조정 */
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 2rem; /* 설명 텍스트 크기 조정 */
+    color: #000000;
+    margin-top: 10px;
+}
+
+.form-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 0.25rem;
+    border-color: #007bff; /* 파란색 테두리 */
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #83C9E7, #00A3E0);
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 163, 224, 0.4);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #00A3E0, #83C9E7);
+    box-shadow: 0px 6px 15px rgba(0, 163, 224, 0.6);
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content-container h1,
+.content-container p {
+    animation: fadeIn 2s ease-in-out;
+    color: #003366;
+}
+
